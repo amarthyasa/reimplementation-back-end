@@ -57,9 +57,9 @@ class Participant < ApplicationRecord
   
     def force_delete(maps)
       maps && maps.each(&:destroy)
-      if team && (team.teams_users.length == 1)
-        team.delete
-      elsif team
+    #   if team && (team.teams_users.length == 1)
+    #     team.delete
+      if team
         team.teams_users.each { |teams_user| teams_user.destroy if teams_user.user_id == id }
       end
       destroy
