@@ -1,0 +1,18 @@
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/amarthyasa/.rvm/rubies/ruby-3.2.1/bin/ruby -I /Users/amarthyasa/.rvm/rubies/ruby-3.2.1/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230319-40465-jzyroy sitelibdir\=./.gem.20230319-40465-jzyroy clean
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230319-40465-jzyroy sitelibdir\=./.gem.20230319-40465-jzyroy
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230319-40465-jzyroy sitelibdir\=./.gem.20230319-40465-jzyroy install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20230319-40465-jzyroy/bootsnap
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230319-40465-jzyroy sitelibdir\=./.gem.20230319-40465-jzyroy clean

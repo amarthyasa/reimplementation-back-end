@@ -1,0 +1,18 @@
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/amarthyasa/.rvm/rubies/ruby-3.2.1/bin/ruby -I /Users/amarthyasa/.rvm/rubies/ruby-3.2.1/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230319-38871-4djupp sitelibdir\=./.gem.20230319-38871-4djupp clean
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230319-38871-4djupp sitelibdir\=./.gem.20230319-38871-4djupp
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230319-38871-4djupp sitelibdir\=./.gem.20230319-38871-4djupp install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20230319-38871-4djupp
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230319-38871-4djupp sitelibdir\=./.gem.20230319-38871-4djupp clean

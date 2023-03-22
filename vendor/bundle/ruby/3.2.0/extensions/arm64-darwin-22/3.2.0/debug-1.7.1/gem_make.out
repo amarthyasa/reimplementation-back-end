@@ -1,0 +1,19 @@
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/debug-1.7.1/ext/debug
+/Users/amarthyasa/.rvm/rubies/ruby-3.2.1/bin/ruby -I /Users/amarthyasa/.rvm/rubies/ruby-3.2.1/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230319-40857-eor7t0 sitelibdir\=./.gem.20230319-40857-eor7t0 clean
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230319-40857-eor7t0 sitelibdir\=./.gem.20230319-40857-eor7t0
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230319-40857-eor7t0 sitelibdir\=./.gem.20230319-40857-eor7t0 install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 debug.bundle ./.gem.20230319-40857-eor7t0/debug
+
+current directory: /Users/amarthyasa/reimplementation-back-end/vendor/bundle/ruby/3.2.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230319-40857-eor7t0 sitelibdir\=./.gem.20230319-40857-eor7t0 clean

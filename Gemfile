@@ -38,3 +38,11 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem 'spring'
 end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.0.beta2'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
+end
