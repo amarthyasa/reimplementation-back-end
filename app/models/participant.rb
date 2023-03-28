@@ -52,13 +52,11 @@ class Participant < ApplicationRecord
   
       raise 'Associations exist for this participant.' unless force || (maps.blank? && team.nil?)
   
-      force_delete(maps)
+      leave_team(maps)
     end
   
-    def force_delete(maps)
+    def leave_team(maps)
       maps && maps.each(&:destroy)
-    #   if team && (team.teams_users.length == 1)
-    #     team.delete
       if team
         team.teams_users.each { |teams_user| teams_user.destroy if teams_user.user_id == id }
       end
