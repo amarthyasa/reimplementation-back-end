@@ -109,6 +109,30 @@ describe Participant do
         expect(participant.authorization).to eq('reviewer')
       end
     end
+  
+    describe '#export_fields' do
+        # let(:participant) { create(:participant) }
+        let(:options) { { 'personal_details' => 'true', 'role' => 'true', 'parent' => 'true', 'email_options' => 'true', 'handle' => 'true' } }
+        it 'returns the participant data in the correct format' do
+          expected_result = "name", "full name", "email", "role", "parent", "email on submission", "email on review", "email on metareview", "handle"
+          expect(Participant.export_fields(options)).to eq(expected_result)
+        end
+      end
+
+      it '#export' do
+        csv = []
+        parent_id = 1
+        options = nil
+        allow(Participant).to receive_message_chain(:where, :find_each).with(parent_id: 1).with(no_args).and_yield(participant)
+        allow(participant).to receive(:user).and_return(build(:student, name: 'student2065', fullname: '2065, student'))
+        options = { 'personal_details' => 'true', 'role' => 'true' }
+        expect(Participant.export([], 1, options)).to eq(
+          [['student2065',
+            '2065, student',
+            nil,
+            nil]]
+        )
+      end
     
 end
   
