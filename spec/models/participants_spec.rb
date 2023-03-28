@@ -1,18 +1,5 @@
 require "rails_helper" 
 describe Participant do
-  # let(:team) { build(:assignment_team, id: 1, name: 'myTeam') }
-  # let(:user) { build(:student, id: 4, name: 'no name', fullname: 'no two') }
-  # let(:participant) { build(:participant, user: build(:student, name: 'Jane', fullname: 'Doe, Jane', id: 1)) }
-  # let(:participant2) { build(:participant, user: build(:student, name: 'John', fullname: 'Doe, John', id: 2)) }
-  # let(:participant3) { build(:participant, can_review: false, user: build(:student, name: 'King', fullname: 'Titan, King', id: 3)) }
-  # let(:participant4) { Participant.new }
-  # let(:team_user) { build(:team_user, id: 1, user: user, team: team) }
-  # let(:topic) { build(:topic) }
-  #   # let(:team) { build(:assignment_team, id: 1, name: 'myTeam') }
-  #   let(:participant) { build(:participant, user: build(:student, name: 'Jane', fullname: 'Doe, Jane', id: 1)) }
-  #   # let(:participant) {Participant.new(user)}
-  #   # let(:user) {User.create(name: 'Jane', fullname: 'Doe, Jane', id: 1)}
-
 
   let(:team) { build(:assignment_team, id: 1, name: 'myTeam') }
   let(:user) { build(:student, id: 4, name: 'no name', fullname: 'no two') }
@@ -45,15 +32,7 @@ describe Participant do
       end
     end
 
-    # describe '#response' do
-    #   it 'Returns the participant responses' do
-    #     allow(participant).to receive(:response_maps).and_return(review_response_map)
-    #     allow(review_response_map).to receive(:map).and_return(response)
-    #     expect(participant.responses).to eq(response)
-    #   end
-    # end
-
-    describe '#delete' do
+    describe '#leave_team' do
       it 'deletes a participant if no associations exist and force is nil' do
         expect(participant.delete(nil)).to eq(participant)
       end
@@ -64,15 +43,6 @@ describe Participant do
         allow(participant).to receive(:team).and_return(team)
         expect(participant.delete(true)).to eq(participant)
       end
-      # it 'delete participant with associations and force is true and single team_user' do
-      #   allow(participant).to receive(:team).and_return(team)
-      #   allow(team).to receive(:teams_users).and_return(length: 1)
-      #   expect(participant.delete(true)).to eq(participant)
-      # end
-      # it 'raises error, delete participant with associations and force is nil' do
-      #   allow(participant).to receive(:team).and_return(team)
-      #   expect { participant.delete(nil) }.to raise_error.with_message('Associations exist for this participant.')
-      # end
     end
 
     describe '#name' do
@@ -101,12 +71,7 @@ describe Participant do
         expect(Participant.sort_by_name(unsorted)).to eq(sorted)
       end
     end
-  
-    # describe '#handle' do
-    #   it 'returns the handle of the participant' do
-    #     expect(participant.handle(nil)).to eq('handle')
-    #   end
-    # end
+ 
     describe '#topic_name' do
       it 'returns the participant topic name when nil' do
         expect(participant.topic_name).to eq('<center>&#8212;</center>')
